@@ -1,0 +1,143 @@
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode}
+\graphicspath{ {./images/} }
+\usepackage{fancyhdr}
+\newcommand{\R}{\mathbb{R}}
+
+\title{ETERNITY : FUNCTIONS}								
+\author{Juhi Birju Patel}						
+\date{23 July 2022}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+\begin{center}    \textbf{\Large Concordia University}\\[2.0 cm]	\end{center}
+	\textsc{\Large  SOEN 6011 - Software Engineering Process }\\[0.5 cm]
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \textbf \thetitle}\\[0.2 cm]
+	{ \huge \textbf{ Function 6 : B(x,y)}}
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+
+\begin{center}   {\Large Problem Solution 2}\\[2.0 cm]
+\end{center}	
+\begin{center}   {\Large \textbf{\theauthor}} \\[0.2 cm]
+                 {\large Student ID : 40190446 }\\[0.2 cm]
+                 {\large https://github.com/JuhiCodes/SOEN-6011-Course-Project}
+\end{center}
+	
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+\renewcommand{\thesection}{\arabic{section}}
+\newpage
+\section{Functional Requirements}
+\subsection{Assumptions}
+\begin{itemize}
+\item A1: $x,y$ are positive real numbers, i.e $R^+$
+\end{itemize}
+\begin{itemize}
+\item A2: For $x,y$ \in $ Z^+ $ the computation of Beta function becomes very easy. 
+\end{itemize}
+\begin{itemize}
+\item A3: In case of real values of x and y, the computation of the integral function is not necessary.
+\end{itemize}
+
+\subsection{Requirements}
+\begin{itemize}
+\item ID: FR1
+\begin{itemize}
+\item Type: Functional Requirement
+\item Version:  1.0
+\item Difficulty: Easy
+\item Priority: 1
+\item Risk: High
+\item Description: The function throws an error when it is encountered with an input that is out of the domain.
+\item Rationale: Outputs for values that are out of domain range are not defined.
+\end{itemize}
+
+\item ID: FR2
+\begin{itemize}
+\item Type: Functional Requirement
+\item Version:  1.0
+\item Difficulty : Easy
+\item Priority: 1
+\item Risk: High
+\item Description: The function requires exactly two input values in order to perform computations.
+\item Rationale: $x$ and $y$
+\end{itemize}
+
+\item ID: FR3
+\begin{itemize}
+\item Type: Functional Requirement
+\item Version:  1.0
+\item Difficulty : Easy
+\item Priority: 2
+\item Risk: High
+\item Description: For valid input, the output is always a positive real number.
+\item Rationale: Output is defined with in co domain range.
+\end{itemize}
+
+\item ID: FR4
+\begin{itemize}
+\item Type: Functional Requirement
+\item Difficulty : Easy
+\item Version:  1.0
+\item Priority: 1
+\item Risk: low
+\item Description: For all the positive integer inputs to the function , it may not result in any error. Such cases can be handled by gamma function.
+\item Rationale :  \{ \forall $x,y$ \in $Z^+$ \mid $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ \}
+\end{itemize}
+
+\item ID: FR5
+\begin{itemize}
+\item Type: Functional Requirement
+\item Difficulty : Easy
+\item Version:  1.0
+\item Priority: 3
+\item Risk: Low
+\item Description: Input to the function should be numeric values only.
+\item Rationale: x,y \in $R^+$
+\end{itemize}
+
+\item ID: FR6
+\begin{itemize}
+\item Type: Functional Requirement
+\item Difficulty : Easy
+\item Version:  1.0
+\item Priority: 3
+\item Risk: Low
+\item Description: Input values to the function can be similar as well as distinct.
+\item Rationale: $x=y$ or $x\neq y$
+\end{itemize}
+
+\item ID: FR7
+\begin{itemize}
+\item Type: Non- Functional Requirement
+\item Version:  1.0
+\item Priority: 3
+\item Risk: Low
+\item Description: The results of the function should be computed in a specified time frame.
+\item Rationale: To increase performance of the system.
+\end{itemize}
+\end{itemize}
+
+\end{document}
