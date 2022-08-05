@@ -1,0 +1,88 @@
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode}
+\graphicspath{ {./images/} }
+\usepackage{fancyhdr}
+\newcommand{\R}{\mathbb{R}}
+
+\title{ETERNITY : FUNCTIONS}								
+\author{Juhi Birju Patel}						
+\date{23 July 2022}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+\begin{center}    \textbf{\Large Concordia University}\\[2.0 cm]	\end{center}
+	\textsc{\Large  SOEN 6011 - Software Engineering Process }\\[0.5 cm]
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \textbf \thetitle}\\[0.2 cm]
+	{ \huge \textbf{ Function 6 : B(x,y)}}
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+
+\begin{center}   {\Large Problem Solution 5}\\[2.0 cm]
+\end{center}	
+\begin{center}   {\Large \textbf{\theauthor}} \\[0.2 cm]
+                 {\large Student ID : 40190446 }\\[0.2 cm]
+                 {\large https://github.com/JuhiCodes/SOEN-6011-Course-Project}
+\end{center}
+	
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+\renewcommand{\thesection}{\arabic{section}}
+\newpage
+\section{Unit testing}
+
+Testing is an important part of development as it makes the code more robust. The testing of our source code is performed using Junit.
+
+\paragraph{}Environment for testing :
+\begin{enumerate}
+    \item Java Eclipse environment 
+    \item JUnit 5 library
+\end{enumerate}
+
+\paragraph{}Testing Steps and procedure:
+\begin{enumerate}
+    \item The source code is loaded in the eclipse environment.
+    \item The code is validated against all range of inputs and results are analysed.
+    \item All the Junit test are ran.
+\end{enumerate}
+
+\section{Junit results analysis}
+
+Results:
+\begin{enumerate}
+    \item For requirements R1,R2 to check the whether the input to the function is provided in valid range, the test results are passed.
+    \item For requirement R3 R4, to check that the input to the function is always positive, the test results are passed.
+    \item For requirement R5, to check that the function receives only numeric values, the test results are passed. 
+    \item For requirement R6, to check that the function provides accurate outputs for similar and distinct inputs, the test results are passed.
+\end{enumerate}
+
+After careful scrutinisation of the results obtained, we can state that there are no errors present in our code and it mets all the functional requiremnets mentioned.
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{junit}
+Junit,
+\\\texttt{https://junit.org/junit5/}
+
+\end{thebibliography}
+\end{document}
