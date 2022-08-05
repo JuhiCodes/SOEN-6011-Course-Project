@@ -1,0 +1,98 @@
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode}
+\graphicspath{ {./images/} }
+\usepackage{fancyhdr}
+\newcommand{\R}{\mathbb{R}}
+
+\title{ETERNITY : FUNCTIONS}								
+\author{Juhi Birju Patel}						
+\date{23 July 2022}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+\begin{center}    \textbf{\Large Concordia University}\\[2.0 cm]	\end{center}
+	\textsc{\Large  SOEN 6011 - Software Engineering Process }\\[0.5 cm]
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \textbf \thetitle}\\[0.2 cm]
+	{ \huge \textbf{ Function 6 : B(x,y)}}
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+
+\begin{center}   {\Large Problem Solution 1}\\[2.0 cm]
+\end{center}	
+\begin{center}   {\Large \textbf{\theauthor}} \\[0.2 cm]
+                 {\large Student ID : 40190446 }\\[0.2 cm]
+                 {\large https://github.com/JuhiCodes/SOEN-6011-Course-Project}
+\end{center}
+	
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+
+\renewcommand{\thesection}{\arabic{section}}
+\section{Introduction}
+\subsection{Description}
+The Beta function defines the association between set of input and the corresponding output. Each of the input value in beta function is strongly associated with one output value. It is also known as Euler integral of the first kind. It is defined as follows :
+
+$$ B(x,y) = \int_{0}^{1} t^{x-1}(1-t)^{y-1}dt  $$ 
+
+where, $ x > 0 $ and $ y > 0 $
+
+\subsection{Domain}
+$x$ and $y$ are positive real numbers.
+\subsection{Co-Domain}  
+$y$ is positive real number.
+
+
+\subsection{Characteristic}
+\begin{itemize}
+    \item Beta function is a symmetric function : $ B(x,y) = B(y,x) $
+    \item Beta function shares a close relationship to the gamma function :  $$ B(x,y)=\frac{\Gamma x \Gamma y}{\Gamma (x+y)}$$
+    \item When $ x \leq 0 $ and $ y \leq 0 $ then the function follows gamma form.
+    \item The beta function can take multiple parameters as input to the function.
+\end{itemize}
+
+
+\newpage
+\section{Context of use model}
+\begin{itemize}
+    \item 
+    \textbf{User}: A user who wish to use the calculator in order to compute beta function: $B(x,y)$. The input will be $x$ and $y$.
+    \item
+    \textbf{Task}: Compute the Beta function and show the output on the screen.
+    \item
+    \textbf{Environment}:
+    \begin{itemize}
+    \item \textbf{Technical environment}:
+    Power is required in order to operate the calculator to calculate the beta function
+    \item \textbf{Non-technical environment}:
+    The location from where the user is operating the calculator.
+    \end{itemize}
+\end{itemize}
+
+\begin{thebibliography}{4}
+\bibitem{wiki}
+Wikipedia,
+\\\texttt{https://en.wikipedia.org/wiki/Beta\_function}
+
+\end{thebibliography}
+\end{document}
